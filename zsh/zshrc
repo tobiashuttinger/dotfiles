@@ -1,0 +1,26 @@
+# git display, add ${vcs_info_msg_0_} to PROMPT
+#autoload -Uz vcs_info
+#zstyle ':vcs_info:*' enable git svn
+#precmd() {
+#    vcs_info
+#}
+
+export CLICOLOR=1
+
+# prompt format and color
+PROMPT='%B%F{136}%n@%m%f%b %F{039}%.%f ❯ '
+#PROMPT='%B%F{002}%m%f%b:%F{039}%.%f %F{039}❯%f '
+
+# autocompletion case insensitivity
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+autoload -Uz compinit && compinit -i
+
+# plugins
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# print all 256 color numbers to use in {}:
+# for code in {000..255}; do print -P -- "$code: %F{$code}Color%f"; done
+
+alias data="cd /volumes/data"
+alias proj="cd /volumes/data/Data/Projects"
