@@ -2,16 +2,7 @@
 
 Dotfiles are configuration files used in Unix-like operating systems, like Linux and macOS, to store settings for various applications. Although on macOS many preferences aren't kept in dotfiles within the user folder, this repository provides a custom system configuration specifically for macOS.
 
-## Structure
-
-The script is currently divided into three subscripts which take care of different parts of the configuration.
-Please review them carefully before executing. 
-
-Apps that are currently configured:
-- zsh
-- Terminal
-
-## Usage
+## Git
 
 This git repository links external repositories as submodules. 
 To clone the complete project, use:
@@ -19,6 +10,18 @@ To clone the complete project, use:
 ```
 git clone --recurse-submodules <url>
 ```
+
+## Usage
+
+There is no need to manually copy files. Three scripts take care of different parts of the configuration.
+Please review them carefully before executing. 
+
+> [!IMPORTANT]  
+> Run the scripts as user, not with sudo/root.
+
+Apps that are currently configured:
+- zsh
+- Terminal
 
 ## Compatibility
 
