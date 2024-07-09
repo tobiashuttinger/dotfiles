@@ -1,5 +1,8 @@
 #!/usr/bin/env zsh
 
+# Store the current non-sudo user
+currentUser=$(id -un)
+
 # Ask for the administrator password upfront
 sudo -v
 
@@ -21,7 +24,7 @@ sudo sh -c 'echo "127.0.0.1 ocsp2.apple.com" >> /etc/hosts'
 ###############################################################################
 
 # Copy zsh config
-cp ./app_defaults/zsh/zshrc ~/.zshrc
+cp ./zsh/zshrc ~/.zshrc
 chmod 644 ~/.zshrc
 # Copy zsh plugins
 mkdir ~/.zsh
@@ -39,7 +42,7 @@ chmod 600 ~/Library/Preferences/com.apple.Terminal.plist
 ###############################################################################
 
 sudo mkdir -p /usr/local/bin/
-sudo chmod -R tobias:admin /usr/local/bin
+sudo chmod -R ${currentUser}:admin /usr/local/bin
 
 # Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"

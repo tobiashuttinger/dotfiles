@@ -1,5 +1,8 @@
 #!/usr/bin/env zsh
 
+# Store the current non-sudo user
+currentUser=$(id -un)
+
 # Close any open System Preferences panes, to prevent them from overriding
 # settings this script is about to change
 osascript -e 'tell application "System Preferences" to quit'
