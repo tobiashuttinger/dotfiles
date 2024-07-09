@@ -2,7 +2,7 @@
 
 Dotfiles are configuration files used in Unix-like operating systems, like Linux and macOS, to store settings for various applications. Although on macOS many preferences aren't kept in dotfiles within the user folder, this repository provides a custom system configuration specifically for macOS.
 
-## Git
+## Download
 
 This git repository links external repositories as submodules. 
 To clone the complete project, use:
