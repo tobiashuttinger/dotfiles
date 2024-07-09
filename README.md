@@ -11,6 +11,15 @@ Apps that are currently configured:
 - zsh
 - Terminal
 
+## Usage
+
+This git repository links external repositories as submodules. 
+To clone the complete project, use:
+
+```
+git clone --recurse-submodules <url>
+```
+
 ## Compatibility
 
 The current configuration has been tested under Mac OS Sonoma 14.0 - 14.5.
